@@ -7,26 +7,18 @@
 namespace Drupal\bootstrap\Utility;
 
 use Drupal\Component\Utility\NestedArray;
-<<<<<<< HEAD
 use Drupal\Core\Cache\RefinableCacheableDependencyInterface;
 use Drupal\Core\Render\AttachmentsInterface;
 use Drupal\Core\Render\BubbleableMetadata;
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 
 /**
  * Custom ArrayObject implementation.
  *
  * The native ArrayObject is unnecessarily complicated.
-<<<<<<< HEAD
  *
  * @ingroup utility
  */
 class ArrayObject implements \IteratorAggregate, \ArrayAccess, \Serializable, \Countable, AttachmentsInterface, RefinableCacheableDependencyInterface {
-=======
- */
-class ArrayObject implements \IteratorAggregate, \ArrayAccess, \Serializable, \Countable {
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 
   /**
    * The array.
@@ -95,7 +87,6 @@ class ArrayObject implements \IteratorAggregate, \ArrayAccess, \Serializable, \C
   }
 
   /**
-<<<<<<< HEAD
    * {@inheritdoc}
    */
   public function addAttachments(array $attachments) {
@@ -128,8 +119,6 @@ class ArrayObject implements \IteratorAggregate, \ArrayAccess, \Serializable, \C
   }
 
   /**
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
    * Appends the value.
    *
    * @param mixed $value
@@ -147,7 +136,6 @@ class ArrayObject implements \IteratorAggregate, \ArrayAccess, \Serializable, \C
   }
 
   /**
-<<<<<<< HEAD
    * Merges an object's cacheable metadata into the variables array.
    *
    * @param \Drupal\Core\Cache\CacheableDependencyInterface|mixed $object
@@ -177,8 +165,6 @@ class ArrayObject implements \IteratorAggregate, \ArrayAccess, \Serializable, \C
   }
 
   /**
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
    * Get the number of public properties in the ArrayObject.
    *
    * @return int
@@ -223,7 +209,6 @@ class ArrayObject implements \IteratorAggregate, \ArrayAccess, \Serializable, \C
   }
 
   /**
-<<<<<<< HEAD
    * {@inheritdoc}
    */
   public function getAttachments() {
@@ -252,8 +237,6 @@ class ArrayObject implements \IteratorAggregate, \ArrayAccess, \Serializable, \C
   }
 
   /**
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
    * Creates a new iterator from an ArrayObject instance.
    *
    * @return \ArrayIterator
@@ -288,7 +271,6 @@ class ArrayObject implements \IteratorAggregate, \ArrayAccess, \Serializable, \C
   }
 
   /**
-<<<<<<< HEAD
    * {@inheritdoc}
    */
   public function mergeCacheMaxAge($max_age) {
@@ -297,8 +279,6 @@ class ArrayObject implements \IteratorAggregate, \ArrayAccess, \Serializable, \C
   }
 
   /**
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
    * Sort an array using a case insensitive "natural order" algorithm.
    */
   public function natcasesort() {
@@ -379,7 +359,6 @@ class ArrayObject implements \IteratorAggregate, \ArrayAccess, \Serializable, \C
   }
 
   /**
-<<<<<<< HEAD
    * {@inheritdoc}
    */
   public function setAttachments(array $attachments) {
@@ -388,8 +367,6 @@ class ArrayObject implements \IteratorAggregate, \ArrayAccess, \Serializable, \C
   }
 
   /**
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
    * Sort entries with a user-defined function and maintain key association.
    *
    * @param mixed $function

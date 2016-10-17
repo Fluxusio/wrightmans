@@ -13,30 +13,6 @@ use Drupal\bootstrap\Plugin\PreprocessManager;
 use Drupal\Core\Theme\Registry;
 
 /**
-<<<<<<< HEAD
-=======
- * @addtogroup registry
- * @{
- */
-
-// Define additional sub-groups for creating lists for all the theme files.
-/**
- * @defgroup theme_preprocess Theme Preprocess Functions (.vars.php)
- *
- * List of theme preprocess functions used in the Drupal Bootstrap base theme.
- *
- * View the parent topic for additional documentation.
- */
-/**
- * @defgroup templates Theme Templates (.html.twig)
- *
- * List of theme templates used in the Drupal Bootstrap base theme.
- *
- * View the parent topic for additional documentation.
- */
-
-/**
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  * Extends the theme registry to override and use protected functions.
  *
  * @todo Refactor into a proper theme.registry service replacement in a
@@ -44,11 +20,8 @@ use Drupal\Core\Theme\Registry;
  *
  * @see https://www.drupal.org/node/474684
  *
-<<<<<<< HEAD
  * @ingroup plugins_alter
  *
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  * @BootstrapAlter("theme_registry")
  */
 class ThemeRegistry extends Registry implements AlterInterface {
@@ -94,7 +67,6 @@ class ThemeRegistry extends Registry implements AlterInterface {
     // Sort the registry alphabetically (for easier debugging).
     ksort($cache);
 
-<<<<<<< HEAD
     // Ensure paths to templates are set properly. This allows templates to
     // be moved around in a theme without having to constantly ensuring that
     // the theme's hook_theme() definitions have the correct static "path" set.
@@ -117,8 +89,6 @@ class ThemeRegistry extends Registry implements AlterInterface {
       }
     }
 
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
     // Discover all the theme's preprocess plugins.
     $preprocess_manager = new PreprocessManager($this->currentTheme);
     $plugins = $preprocess_manager->getDefinitions();
@@ -130,7 +100,6 @@ class ThemeRegistry extends Registry implements AlterInterface {
       if (!isset($cache[$plugin_id])) {
         $cache[$plugin_id] = [];
       }
-<<<<<<< HEAD
       array_walk($cache, function (&$info, $hook) use ($plugin_id, $definition) {
         if ($hook === $plugin_id || strpos($hook, $plugin_id . '__') === 0) {
           if (!isset($info['preprocess functions'])) {
@@ -143,10 +112,6 @@ class ThemeRegistry extends Registry implements AlterInterface {
           // @todo Revisit if/when preprocess callbacks can be any callable.
           Bootstrap::addCallback($info['preprocess functions'], 'bootstrap_preprocess', $definition['replace'], $definition['action']);
           $info['preprocess functions'] = array_unique($info['preprocess functions']);
-=======
-      array_walk($cache, function (&$info, $hook) use ($plugin_id) {
-        if ($hook === $plugin_id || strpos($hook, $plugin_id . '__') === 0) {
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
           $info['bootstrap preprocess'] = $plugin_id;
         }
       });
@@ -161,10 +126,3 @@ class ThemeRegistry extends Registry implements AlterInterface {
   }
 
 }
-<<<<<<< HEAD
-=======
-
-/**
- * @} End of "addtogroup registry".
- */
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966

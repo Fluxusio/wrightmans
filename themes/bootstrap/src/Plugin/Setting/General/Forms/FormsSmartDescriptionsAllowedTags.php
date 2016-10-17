@@ -14,11 +14,8 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * The "forms_smart_descriptions_allowed_tags" theme setting.
  *
-<<<<<<< HEAD
  * @ingroup plugins_setting
  *
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  * @BootstrapSetting(
  *   id = "forms_smart_descriptions_allowed_tags",
  *   type = "textfield",

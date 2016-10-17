@@ -15,11 +15,8 @@ use GuzzleHttp\Psr7\Response;
 
 /**
  * CDN provider base class.
-<<<<<<< HEAD
  *
  * @ingroup plugins_provider
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  */
 class ProviderBase extends PluginBase implements ProviderInterface {
 

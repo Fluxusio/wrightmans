@@ -60,7 +60,6 @@
     ],
     "pre-commit": [
       {
-<<<<<<< HEAD
         "files": "starterkits/less/less/**/*.less",
         "commands": [
           "grunt compile"
@@ -78,15 +77,6 @@
         ],
         "matchAll": false
       }
-=======
-        "files": "starterkits/less/less/overrides.less",
-        "commands": [
-          "grunt compile",
-          "git add css/**/overrides*.css"
-        ],
-        "staged": true
-      }
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
     ]
   }
 }

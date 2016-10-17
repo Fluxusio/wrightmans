@@ -5,7 +5,6 @@ services:
     tags:
       - { name: event_subscriber }
 
-<<<<<<< HEAD
   plugin.manager.devel_dumper:
     class: Drupal\devel\DevelDumperPluginManager
     parent: default_plugin_manager
@@ -14,8 +13,6 @@ services:
     class: Drupal\devel\DevelDumperManager
     arguments: ['@config.factory', '@current_user', '@plugin.manager.devel_dumper']
 
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
   devel.route_subscriber:
     class: Drupal\devel\Routing\RouteSubscriber
     arguments: ['@entity_type.manager']

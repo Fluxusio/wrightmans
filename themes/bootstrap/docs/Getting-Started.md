@@ -4,11 +4,7 @@
 
 ## Installation
 - Install the Bootstrap base theme in `themes` or a similar `sites/*/themes`
-<<<<<<< HEAD
   directory.
-=======
-  folder.
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 - Enable the [Drupal Bootstrap] base theme.
 
 ## Bootstrap Framework Fundamentals
@@ -29,7 +25,6 @@ that site is split into:
   [Bootstrap Framework] components to life with over a dozen custom jQuery
   plugins. Easily include them all, or one by one.
 
-<<<<<<< HEAD
 
 ## FAQ - Frequently Asked Questions
 
@@ -140,7 +135,3 @@ Instead, you should create a custom sub-theme that isn't hosted on Drupal.org.
 [Drupal Bootstrap]: https://www.drupal.org/project/bootstrap
 [Bootstrap Framework]: http://getbootstrap.com
 [jQuery Update]: https://drupal.org/project/jquery_update
-=======
-[Drupal Bootstrap]: https://www.drupal.org/project/bootstrap
-[Bootstrap Framework]: http://getbootstrap.com
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966

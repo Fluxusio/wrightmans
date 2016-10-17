@@ -6,7 +6,6 @@
 (function ($, window, Drupal, drupalSettings) {
 
   /**
-<<<<<<< HEAD
    * Attempts to find the closest glyphicon progress indicator.
    *
    * @param {jQuery|Element} element
@@ -189,17 +188,4 @@
     this.settings = null;
   };
 
-=======
-   * Sets the throbber progress indicator.
-   */
-  Drupal.Ajax.prototype.setProgressIndicatorThrobber = function () {
-    this.progress.element = $('<div class="ajax-progress ajax-progress-throbber"><span class="icon glyphicon glyphicon-refresh glyphicon-spin"></span></div>');
-    if (this.progress.message) {
-      this.progress.element.after('<div class="message">' + this.progress.message + '</div>');
-    }
-    $(this.element).after(this.progress.element);
-  };
-
-
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 })(jQuery, this, Drupal, drupalSettings);

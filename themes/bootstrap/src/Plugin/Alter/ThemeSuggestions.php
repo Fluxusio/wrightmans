@@ -14,11 +14,8 @@ use Drupal\bootstrap\Utility\Unicode;
 /**
  * Implements hook_theme_suggestions_alter().
  *
-<<<<<<< HEAD
  * @ingroup plugins_alter
  *
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  * @BootstrapAlter("theme_suggestions")
  */
 class ThemeSuggestions extends PluginBase implements AlterInterface {

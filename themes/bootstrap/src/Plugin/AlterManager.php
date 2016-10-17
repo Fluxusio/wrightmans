@@ -10,11 +10,8 @@ use Drupal\bootstrap\Theme;
 
 /**
  * Manages discovery and instantiation of Bootstrap hook alters.
-<<<<<<< HEAD
  *
  * @ingroup plugins_alter
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  */
 class AlterManager extends PluginManager {
 

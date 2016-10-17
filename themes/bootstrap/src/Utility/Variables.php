@@ -8,26 +8,17 @@ namespace Drupal\bootstrap\Utility;
 
 /**
  * Class to help modify template variables.
-<<<<<<< HEAD
  *
  * @ingroup utility
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  */
 class Variables extends DrupalAttributes {
 
   /**
    * An element object.
    *
-<<<<<<< HEAD
    * @var \Drupal\bootstrap\Utility\Element|FALSE
    */
   public $element = FALSE;
-=======
-   * @var \Drupal\bootstrap\Utility\Element
-   */
-  public $element;
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 
   /**
    * Element constructor.
@@ -37,16 +28,12 @@ class Variables extends DrupalAttributes {
    */
   public function __construct(array &$variables) {
     $this->array = &$variables;
-<<<<<<< HEAD
     if (isset($variables['element'])) {
       $this->element = Element::create($variables['element']);
     }
     elseif (isset($variables['elements'])) {
       $this->element = Element::create($variables['elements']);
     }
-=======
-    $this->element = isset($variables['element']) ? Element::create($variables['element']) : FALSE;
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
   }
 
   /**

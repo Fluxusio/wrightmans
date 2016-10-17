@@ -8,11 +8,8 @@ namespace Drupal\bootstrap\Utility;
 
 /**
  * Class to help modify attributes.
-<<<<<<< HEAD
  *
  * @ingroup utility
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  */
 class Attributes extends ArrayObject {
 

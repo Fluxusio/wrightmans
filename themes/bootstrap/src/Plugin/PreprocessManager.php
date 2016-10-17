@@ -10,11 +10,8 @@ use Drupal\bootstrap\Theme;
 
 /**
  * Manages discovery and instantiation of Bootstrap preprocess hooks.
-<<<<<<< HEAD
  *
  * @ingroup plugins_preprocess
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  */
 class PreprocessManager extends PluginManager {
 

@@ -13,20 +13,14 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * The "cdn_jsdelivr_theme" theme setting.
  *
-<<<<<<< HEAD
  * @ingroup plugins_setting
  *
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  * @BootstrapSetting(
  *   cdn_provider = "jsdelivr",
  *   id = "cdn_jsdelivr_theme",
  *   type = "select",
  *   title = @Translation("Theme"),
-<<<<<<< HEAD
  *   description = @Translation("Choose the example Bootstrap Theme provided by Bootstrap or one of the Bootswatch themes."),
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  *   defaultValue = "bootstrap",
  *   empty_option = @Translation("Bootstrap (default)"),
  *   empty_value = "bootstrap",

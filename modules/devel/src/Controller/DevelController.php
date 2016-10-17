@@ -14,10 +14,7 @@ use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Url;
 use Drupal\field\Entity\FieldConfig;
 use Drupal\field\Entity\FieldStorageConfig;
-<<<<<<< HEAD
 use Symfony\Component\HttpFoundation\Request;
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 
 /**
  * Returns responses for devel module routes.
@@ -33,7 +30,6 @@ class DevelController extends ControllerBase {
     return $this->redirect('<front>');
   }
 
-<<<<<<< HEAD
   /**
    * Returns a dump of a route object.
    *
@@ -67,11 +63,6 @@ class DevelController extends ControllerBase {
     }
 
     return $output;
-=======
-  public function menuItem() {
-    $item = menu_get_item(current_path());
-    return kdevel_print_object($item);
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
   }
 
   public function themeRegistry() {

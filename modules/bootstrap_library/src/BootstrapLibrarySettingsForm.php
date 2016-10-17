@@ -171,7 +171,6 @@ function _bootstrap_library_data() {
   return '{
   "timestamp": "2015-11-09T18:54:50.335Z",
   "bootstrap": {
-<<<<<<< HEAD
     "4.0.0-alpha.3": {
       "css": "//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css",
       "js": "//cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"
@@ -180,11 +179,6 @@ function _bootstrap_library_data() {
     "3.3.7": {
       "css": "//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css",
       "js": "//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-=======
-    "4.0.0-alpha": {
-      "css": "//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css",
-      "js": "//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js"
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
     },
     "3.3.6": {
       "css": "//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css",

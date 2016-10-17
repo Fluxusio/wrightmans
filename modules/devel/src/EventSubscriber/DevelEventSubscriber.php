@@ -75,11 +75,7 @@ class DevelEventSubscriber implements EventSubscriberInterface {
       }
       else {
         $firephp_path = DRUPAL_ROOT . '/libraries/FirePHPCore/lib/FirePHPCore/';
-<<<<<<< HEAD
         $chromephp_path = DRUPAL_ROOT . '/libraries/chromephp';
-=======
-        $chromephp_path = './' . drupal_get_path('module', 'devel') . '/chromephp';
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
       }
 
       // Include FirePHP if it exists.
@@ -95,10 +91,6 @@ class DevelEventSubscriber implements EventSubscriberInterface {
 
     }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
     if ($this->config->get('rebuild_theme')) {
       drupal_theme_rebuild();
 

@@ -216,8 +216,4 @@
     }
   })
 
-<<<<<<< HEAD
 })(window.jQuery, window.Drupal, window.Drupal.bootstrap);
-=======
-})(jQuery, Drupal, Drupal.Bootstrap);
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966

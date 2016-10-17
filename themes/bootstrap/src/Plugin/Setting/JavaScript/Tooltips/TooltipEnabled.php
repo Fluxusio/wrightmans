@@ -14,11 +14,8 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * The "tooltip_enabled" theme setting.
  *
-<<<<<<< HEAD
  * @ingroup plugins_setting
  *
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  * @BootstrapSetting(
  *   id = "tooltip_enabled",
  *   type = "checkbox",
@@ -46,7 +43,6 @@ class TooltipEnabled extends SettingBase {
     ]));
   }
 
-<<<<<<< HEAD
   /**
    * {@inheritdoc}
    */
@@ -54,6 +50,4 @@ class TooltipEnabled extends SettingBase {
     return !!$this->theme->getSetting('tooltip_enabled');
   }
 
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 }

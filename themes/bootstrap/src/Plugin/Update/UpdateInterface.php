@@ -10,11 +10,8 @@ use Drupal\bootstrap\Theme;
 
 /**
  * Defines the interface for an object oriented preprocess plugin.
-<<<<<<< HEAD
  *
  * @ingroup plugins_update
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  */
 interface UpdateInterface {
 
@@ -27,7 +24,6 @@ interface UpdateInterface {
   public function getDescription();
 
   /**
-<<<<<<< HEAD
    * Retrieves the human-readable label for the update.
    *
    * @return string
@@ -95,37 +91,11 @@ interface UpdateInterface {
    *   reconstitute the object upon un-serialization. If you need to pass a
    *   theme object between instances, you should instead use an identifier
    *   (string) that can be used to reconstitute the object when needed.
-=======
-   * Retrieves the update level, if any.
-   *
-   * @return string
-   *   The update level.
-   */
-  public function getLevel();
-
-  /**
-   * Retrieves the update human-readable title.
-   *
-   * @return string
-   *   The update's title.
-   */
-  public function getTitle();
-
-  /**
-   * Update callback.
-   *
-   * @param \Drupal\bootstrap\Theme $theme
-   *   The theme being updated.
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
    *
    * @return bool
    *   FALSE if the update failed, otherwise any other return will be
    *   interpreted as TRUE.
    */
-<<<<<<< HEAD
   public function process(Theme $theme, array &$context);
-=======
-  public function update(Theme $theme);
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 
 }

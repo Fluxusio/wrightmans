@@ -7,18 +7,12 @@
 namespace Drupal\bootstrap\Plugin;
 
 use Drupal\bootstrap\Theme;
-<<<<<<< HEAD
 use Drupal\Component\Utility\SortArray;
 
 /**
  * Manages discovery and instantiation of Bootstrap updates.
  *
  * @ingroup plugins_update
-=======
-
-/**
- * Manages discovery and instantiation of Bootstrap updates.
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  */
 class UpdateManager extends PluginManager {
 
@@ -29,7 +23,6 @@ class UpdateManager extends PluginManager {
    *   The theme to use for discovery.
    */
   public function __construct(Theme $theme) {
-<<<<<<< HEAD
     // Unlike other plugins in this base theme, this one should only discover
     // update plugins that are unique to its own theme to avoid plugin ID
     // collision (e.g. base and sub-theme both implement an update plugin
@@ -42,14 +35,10 @@ class UpdateManager extends PluginManager {
     $this->pluginInterface = 'Drupal\bootstrap\Plugin\Update\UpdateInterface';
     $this->themeHandler = \Drupal::service('theme_handler');
     $this->themeManager = \Drupal::service('theme.manager');
-=======
-    parent::__construct($theme, 'Plugin/Update', 'Drupal\bootstrap\Plugin\Update\UpdateInterface', 'Drupal\bootstrap\Annotation\BootstrapUpdate');
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
     $this->setCacheBackend(\Drupal::cache('discovery'), 'theme:' . $theme->getName() . ':update', $this->getCacheTags());
   }
 
   /**
-<<<<<<< HEAD
    * {@inheritdoc}
    */
   public function getDefinitions($sorted = TRUE) {
@@ -77,25 +66,11 @@ class UpdateManager extends PluginManager {
       $schema = max(max($schemas), $schema);
     }
     return $schema;
-=======
-   * Retrieves the latest update version.
-   *
-   * @return int
-   *   The latest update version.
-   */
-  public function getLatestVersion() {
-    $version = \Drupal::CORE_MINIMUM_SCHEMA_VERSION;
-    if ($versions = $this->getVersions()) {
-      $version = max(max($versions), $version);
-    }
-    return $version;
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
   }
 
   /**
    * Retrieves any pending updates.
    *
-<<<<<<< HEAD
    * @param bool $private
    *   Toggle determining whether or not to include private updates, intended
    *   for only the theme that created it. Defaults to: FALSE.
@@ -107,15 +82,6 @@ class UpdateManager extends PluginManager {
     $pending = [];
     $installed = $this->theme->getSetting('schemas', []);
     foreach ($this->getUpdates($private) as $version => $update) {
-=======
-   * @return \Drupal\bootstrap\Plugin\Update\UpdateInterface[]
-   *   An associative array containing update objects, keyed by their version.
-   */
-  public function getPendingUpdates() {
-    $pending = [];
-    $installed = $this->theme->getSetting('schema');
-    foreach ($this->getUpdates() as $version => $update) {
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
       if ($version > $installed) {
         $pending[$version] = $update;
       }
@@ -126,7 +92,6 @@ class UpdateManager extends PluginManager {
   /**
    * Retrieves update plugins for the theme.
    *
-<<<<<<< HEAD
    * @param bool $private
    *   Toggle determining whether or not to include private updates, intended
    *   for only the theme that created it. Defaults to: FALSE.
@@ -139,22 +104,10 @@ class UpdateManager extends PluginManager {
     foreach ($this->getSchemas($private) as $schema) {
       $updates[$schema] = $this->createInstance($schema, ['theme' => $this->theme]);
     }
-=======
-   * @return \Drupal\bootstrap\Plugin\Update\UpdateInterface[]
-   *   An associative array containing update objects, keyed by their version.
-   */
-  public function getUpdates() {
-    $updates = [];
-    foreach ($this->getVersions() as $version) {
-      $updates[$version] = $this->createInstance($version, ['theme' => $this->theme]);
-    }
-    ksort($updates, SORT_NUMERIC);
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
     return $updates;
   }
 
   /**
-<<<<<<< HEAD
    * Retrieves the update schema identifiers.
    *
    * @param bool $private
@@ -196,16 +149,5 @@ class UpdateManager extends PluginManager {
   public function getLatestVersion() {
     return $this->getLatestSchema();
   }
-=======
-   * Retrieves the update schema versions for the theme.
-   *
-   * @return array
-   *   An indexed array of schema versions.
-   */
-  protected function getVersions() {
-    return array_keys($this->getDefinitions());
-  }
-
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 
 }

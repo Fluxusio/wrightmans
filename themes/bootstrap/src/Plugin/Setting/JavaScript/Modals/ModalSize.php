@@ -13,20 +13,14 @@ use Drupal\Core\Annotation\Translation;
 /**
  * The "modal_size" theme setting.
  *
-<<<<<<< HEAD
  * @ingroup plugins_setting
  *
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  * @BootstrapSetting(
  *   id = "modal_size",
  *   type = "select",
  *   title = @Translation("Default modal size"),
  *   defaultValue = "",
-<<<<<<< HEAD
  *   description = @Translation("Defines the modal size between the default, <code>modal-sm</code> and <code>modal-lg</code>."),
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  *   empty_option = @Translation("Normal"),
  *   groups = {
  *     "javascript" = @Translation("JavaScript"),

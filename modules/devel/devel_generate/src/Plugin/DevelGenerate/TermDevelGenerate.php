@@ -239,7 +239,6 @@ class TermDevelGenerate extends DevelGenerateBase implements ContainerFactoryPlu
    * {@inheritdoc}
    */
   public function validateDrushParams($args) {
-<<<<<<< HEAD
     $vocabulary_name = array_shift($args);
     $number = array_shift($args);
 
@@ -266,23 +265,6 @@ class TermDevelGenerate extends DevelGenerateBase implements ContainerFactoryPlu
       'title_length' => 12,
       'vids' => [$vocabulary->id()],
     ];
-=======
-    $vname = array_shift($args);
-    $values = array(
-      'num' => array_shift($args),
-      'kill' => drush_get_option('kill'),
-      'title_length' => 12,
-    );
-    // Try to convert machine name to a vocab ID
-    if (!$vocab = $this->vocabularyStorage->load($vname)) {
-      return drush_set_error('DEVEL_GENERATE_INVALID_INPUT', dt('Invalid vocabulary name: @name', array('@name' => $vname)));
-    }
-    if ($this->isNumber($values['num']) == FALSE) {
-      return drush_set_error('DEVEL_GENERATE_INVALID_INPUT', dt('Invalid number of terms: @num', array('@num' => $values['num'])));
-    }
-
-    $values['vids'] = array($vocab->id());
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 
     return $values;
   }

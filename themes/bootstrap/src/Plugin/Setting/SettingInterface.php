@@ -7,23 +7,15 @@
 namespace Drupal\bootstrap\Plugin\Setting;
 
 use Drupal\bootstrap\Plugin\Form\FormInterface;
-<<<<<<< HEAD
 use Drupal\Component\Plugin\PluginInspectionInterface;
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Defines the interface for an object oriented theme setting plugin.
-<<<<<<< HEAD
  *
  * @ingroup plugins_setting
  */
 interface SettingInterface extends PluginInspectionInterface, FormInterface {
-=======
- */
-interface SettingInterface extends FormInterface {
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 
   /**
    * Determines whether a theme setting should added to drupalSettings.

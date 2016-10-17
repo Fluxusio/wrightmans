@@ -14,11 +14,8 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * The "breadcrumb_title" theme setting.
  *
-<<<<<<< HEAD
  * @ingroup plugins_setting
  *
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  * @BootstrapSetting(
  *   id = "breadcrumb_title",
  *   type = "checkbox",

@@ -17,20 +17,13 @@ use Drupal\Core\Extension\ThemeHandlerInterface;
 
 /**
  * Defines a theme object.
-<<<<<<< HEAD
  *
  * @ingroup utility
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  */
 class Theme {
 
   /**
-<<<<<<< HEAD
    * Ignores the following directories during file scans of a theme.
-=======
-   * Ignores the following folders during file scans of a theme.
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
    *
    * @see \Drupal\bootstrap\Theme::IGNORE_ASSETS
    * @see \Drupal\bootstrap\Theme::IGNORE_CORE
@@ -40,29 +33,17 @@ class Theme {
   const IGNORE_DEFAULT = -1;
 
   /**
-<<<<<<< HEAD
    * Ignores the directories "assets", "css", "images" and "js".
-=======
-   * Ignores the folders "assets", "css", "images" and "js".
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
    */
   const IGNORE_ASSETS = 0x1;
 
   /**
-<<<<<<< HEAD
    * Ignores the directories "config", "lib" and "src".
-=======
-   * Ignores the folders "config", "lib" and "src".
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
    */
   const IGNORE_CORE = 0x2;
 
   /**
-<<<<<<< HEAD
    * Ignores the directories "docs" and "documentation".
-=======
-   * Ignores the folders "docs" and "documentation".
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
    */
   const IGNORE_DOCS = 0x4;
 
@@ -72,11 +53,7 @@ class Theme {
   const IGNORE_DEV = 0x8;
 
   /**
-<<<<<<< HEAD
    * Ignores the directories "templates" and "theme".
-=======
-   * Ignores the folders "templates" and "theme".
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
    */
   const IGNORE_TEMPLATES = 0x16;
 
@@ -88,7 +65,6 @@ class Theme {
   protected $info;
 
   /**
-<<<<<<< HEAD
    * The theme machine name.
    *
    * @var string
@@ -96,8 +72,6 @@ class Theme {
   protected $name;
 
   /**
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
    * The current theme Extension object.
    *
    * @var \Drupal\Core\Extension\Extension
@@ -119,7 +93,6 @@ class Theme {
   protected $themeHandler;
 
   /**
-<<<<<<< HEAD
    * The update plugin manager.
    *
    * @var \Drupal\bootstrap\Plugin\UpdateManager
@@ -127,8 +100,6 @@ class Theme {
   protected $updateManager;
 
   /**
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
    * Theme constructor.
    *
    * @param \Drupal\Core\Extension\Extension $theme
@@ -137,7 +108,6 @@ class Theme {
    *   The theme handler object.
    */
   public function __construct(Extension $theme, ThemeHandlerInterface $theme_handler) {
-<<<<<<< HEAD
     $this->name = $theme->getName();
     $this->theme = $theme;
     $this->themeHandler = $theme_handler;
@@ -153,22 +123,10 @@ class Theme {
         // Intentionally left blank.
         // @see https://www.drupal.org/node/2697075
       }
-=======
-    $name = $theme->getName();
-    $this->theme = $theme;
-    $this->themeHandler = $theme_handler;
-    $this->themes = $this->themeHandler->listInfo();
-    $this->info = isset($this->themes[$name]->info) ? $this->themes[$name]->info : [];
-
-    // Only install the theme if there is no schema version currently set.
-    if (!$this->getSetting('schema')) {
-      $this->install();
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
     }
   }
 
   /**
-<<<<<<< HEAD
    * Serialization method.
    */
   public function __sleep() {
@@ -186,8 +144,6 @@ class Theme {
   }
 
   /**
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
    * Returns the theme machine name.
    *
    * @return string
@@ -325,21 +281,15 @@ class Theme {
    *
    * @param string $name
    *   The name of the item to retrieve from the theme cache.
-<<<<<<< HEAD
    * @param array $context
    *   Optional. An array of additional context to use for retrieving the
    *   cached storage.
    * @param mixed $default
    *   Optional. The default value to use if $name does not exist.
-=======
-   * @param mixed $default
-   *   The default value to use if $name does not exist.
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
    *
    * @return mixed|\Drupal\bootstrap\Utility\StorageItem
    *   The cached value for $name.
    */
-<<<<<<< HEAD
   public function getCache($name, array $context = [], $default = []) {
     static $cache = [];
 
@@ -361,21 +311,6 @@ class Theme {
     }
 
     return $cache[$name];
-=======
-  public function getCache($name, $default = []) {
-    static $cache = [];
-    $theme = $this->getName();
-    $theme_cache = self::getStorage();
-    if (!isset($cache[$theme][$name])) {
-      $value = $theme_cache->get($name);
-      if (!isset($value)) {
-        $value  = is_array($default) ? new StorageItem($default, $theme_cache) : $default;
-        $theme_cache->set($name, $value);
-      }
-      $cache[$theme][$name] = $value;
-    }
-    return $cache[$theme][$name];
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
   }
 
   /**
@@ -415,7 +350,6 @@ class Theme {
   }
 
   /**
-<<<<<<< HEAD
    * Retrieves pending updates for the theme.
    *
    * @return \Drupal\bootstrap\Plugin\Update\UpdateInterface[]
@@ -442,8 +376,6 @@ class Theme {
   }
 
   /**
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
    * Retrieves the CDN provider.
    *
    * @param string $provider
@@ -484,7 +416,6 @@ class Theme {
    *
    * @param string $name
    *   The name of the setting to be retrieved.
-<<<<<<< HEAD
    * @param mixed $default
    *   A default value to provide if the setting is not found or if the plugin
    *   does not have a "defaultValue" annotation key/value pair. Typically,
@@ -501,22 +432,6 @@ class Theme {
   public function getSetting($name, $default = NULL) {
     $value = $this->settings()->get($name);
     return !isset($value) ? $default : $value;
-=======
-   * @param bool $original
-   *   Retrieve the original default value from code (or base theme config),
-   *   not from the active theme's stored config.
-   *
-   * @return mixed
-   *   The value of the requested setting, NULL if the setting does not exist.
-   *
-   * @see theme_get_setting()
-   */
-  public function getSetting($name, $original = FALSE) {
-    if ($original) {
-      return $this->settings()->getOriginal($name);
-    }
-    return $this->settings()->get($name);
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
   }
 
   /**
@@ -560,7 +475,6 @@ class Theme {
   }
 
   /**
-<<<<<<< HEAD
    * Retrieves the update plugin manager for the theme.
    *
    * @return \Drupal\bootstrap\Plugin\UpdateManager
@@ -573,8 +487,6 @@ class Theme {
   }
 
   /**
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
    * Determines whether or not if the theme has Bootstrap Framework Glyphicons.
    */
   public function hasGlyphicons() {
@@ -623,16 +535,11 @@ class Theme {
    * Installs a Bootstrap based theme.
    */
   final protected function install() {
-<<<<<<< HEAD
     $schemas = [];
     foreach ($this->getAncestry() as $ancestor) {
       $schemas[$ancestor->getName()] = $ancestor->getUpdateManager()->getLatestSchema();
     }
     $this->setSetting('schemas', $schemas);
-=======
-    $update_manager = new UpdateManager($this);
-    $this->setSetting('schema', $update_manager->getLatestVersion());
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
   }
 
   /**

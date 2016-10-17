@@ -13,11 +13,8 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Processes the "search" element.
  *
-<<<<<<< HEAD
  * @ingroup plugins_process
  *
-=======
->>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  * @BootstrapProcess("search")
  */
 class Search extends ProcessBase implements ProcessInterface {
