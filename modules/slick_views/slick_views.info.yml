@@ -9,8 +9,8 @@ dependencies:
   - slick
   - views
 
-# Information added by Drupal.org packaging script on 2016-09-06
-version: '8.x-1.0-beta3'
+# Information added by Drupal.org packaging script on 2016-09-29
+version: '8.x-1.0-beta4'
 core: '8.x'
 project: 'slick_views'
-datestamp: 1473197940
+datestamp: 1475150084

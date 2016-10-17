@@ -4,6 +4,7 @@ namespace Drupal\blazy\Form;
 
 use Drupal\Core\Url;
 use Drupal\Core\Form\FormState;
+use Drupal\Component\Utility\Unicode;
 
 /**
  * A base for field formatter admin to have re-usable methods in one place.
@@ -126,6 +127,7 @@ abstract class BlazyAdminFormatterBase extends BlazyAdminBase {
       '#description' => t('Required to grab the fields. Be sure the selected "View mode" is enabled, and the enabled fields here are not hidden there. Manage view modes on the <a href=":view_modes">View modes page</a>.', [':view_modes' => Url::fromRoute('entity.entity_view_mode.collection')->toString()]),
       '#access'      => isset($definition['fieldable_form']) && isset($definition['target_type']),
       '#weight'      => -96,
+      '#enforced'    => TRUE,
     ];
 
     // Optional lightbox integration.
@@ -206,27 +208,35 @@ abstract class BlazyAdminFormatterBase extends BlazyAdminBase {
   /**
    * Return the field formatter settings summary.
    */
-  public function settingsSummary($plugin, $excludes = []) {
+  public function settingsSummary($plugin, $definition = []) {
     $form         = [];
     $summary      = [];
     $form_state   = new FormState();
-    $settings     = $plugin->getSettings();
+    $settings     = isset($definition['settings']) ? $definition['settings'] : $plugin->getSettings();
     $elements     = $plugin->settingsForm($form, $form_state);
     $image_styles = image_style_options(TRUE);
     $breakpoints  = isset($settings['breakpoints']) ? array_filter($settings['breakpoints']) : [];
+    $excludes     = empty($definition['excludes']) ? $definition : $definition['excludes'];
 
     unset($image_styles['']);
 
     foreach ($settings as $key => $setting) {
+      $type = isset($elements[$key]['#type']) ? $elements[$key]['#type'] : '';
+
       if (!empty($excludes) && in_array($key, $excludes)) {
         continue;
       }
+
+      if (in_array($type, ['button', 'hidden', 'markup', 'item', 'submit']) || empty($type)) {
+        continue;
+      }
+
       $access   = isset($elements[$key]['#access']) ? $elements[$key]['#access'] : TRUE;
-      $title    = isset($elements[$key]['#title']) ? $elements[$key]['#title'] : '';
+      $title    = !isset($elements[$key]) && isset($settings[$key]) ? Unicode::ucfirst(str_replace('_', ' ', $key)) : '';
+      $title    = isset($elements[$key]['#title']) ? $elements[$key]['#title'] : $title;
       $options  = isset($elements[$key]['#options']) ? $elements[$key]['#options'] : [];
       $vanilla  = !empty($settings['vanilla']) && !isset($elements[$key]['#enforced']);
       $multiple = isset($elements[$key]['#multiple']) && $elements[$key]['#multiple'];
-      $type     = isset($elements[$key]['#type']) ? $elements[$key]['#type'] : '';
 
       if ($key == 'breakpoints') {
         $widths = [];
@@ -253,7 +263,7 @@ abstract class BlazyAdminFormatterBase extends BlazyAdminBase {
         if (is_bool($setting) && $setting) {
           $setting = t('Yes');
         }
-        elseif (is_string($setting)) {
+        elseif (is_string($setting) && $key != 'cache') {
           // The value is based on select options.
           if (!$multiple && $type == 'select' && isset($options[$setting])) {
             $setting = is_object($options[$setting]) ? $options[$setting]->render() : $options[$setting];

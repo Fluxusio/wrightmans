@@ -2,7 +2,6 @@
 
 namespace Drupal\slick_views\Plugin\views\style;
 
-use Drupal\Component\Utility\Html;
 use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\slick\SlickDefault;
@@ -79,6 +78,7 @@ class SlickViews extends BlazyStylePluginBase {
       'overlays',
       'thumbnails',
       'thumb_captions',
+      'thumb_positions',
       'titles',
     ];
 

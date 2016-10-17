@@ -7,8 +7,8 @@ dependencies:
   - bootstrap_library
   - composer_manager
 
-# Information added by Drupal.org packaging script on 2016-08-29
-version: '8.x-1.4'
+# Information added by Drupal.org packaging script on 2016-09-28
+version: '8.x-1.6'
 core: '8.x'
 project: 'bootstrap_library'
-datestamp: 1472511574
+datestamp: 1475070277
