@@ -1,0 +1,722 @@
+/**
+ * Body
+ */
+body{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	&.navbar-is-fixed-top{
+		margin-top: 90px;
+	}
+}
+/**
+ * Header and nav.
+ */
+header{
+	&#navbar{
+		background-color: #fff;
+		border: none;
+		height: 90px;
+        border-bottom: 1px solid #ccc;
+        box-shadow: -1px 0 3px 1px rgba(0, 0, 0, 0.3333);
+        .navbar-header{
+			.logo{
+				img{
+					height: 70px;
+				}
+			}
+		}
+	}
+	.navbar-collapse{
+		background-color: #fff;
+		#block-wrightmans-main-menu{
+			padding-top: 20px;
+			ul{
+				&.menu{
+					text-transform: uppercase;
+					font-weight: bold;
+					li{
+						background: url(../images/menu/i.png) no-repeat center right;
+						&:last-child{
+							background: none;
+						}
+						a{
+							color: #520974;
+							font-weight: bold;
+    						font-size: 14px;
+							&.is-active{
+								color:#a47f2d;
+								background: none;
+							}
+							&:hover{
+								color:#a47f2d;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/**
+ * Intro header
+ */
+.intro-header{
+	padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../images/front/intro-bg.jpg) no-repeat top center;
+    background-size: cover;
+    min-height: 795px;
+    position: relative;
+    .region-header{
+    		position: absolute;
+    		top: 30%;
+			transform: translateY(-30%);
+			width: 100%;
+	    #block-intromessage{
+	    	.title-message{
+	    		font-size: 90px;
+	    	}
+	    	.body-message{
+	    		width: 50%;
+			    margin: 0px auto;
+			    font-size: 20px;
+			    font-weight: lighter;
+	    	}
+	    }
+	}
+}
+/**
+ * Our Brands
+ */
+.our-brands{
+	background-color: #f1f1f1;
+	#block-views-block-slide-carousel-block-1{
+		position: relative;
+    	bottom: 90px;
+    	.view-header{
+    		fieldset{
+	    		&.title-our-brands{
+	    			border-top: 1px solid #d2d2d2;
+	    			margin: 0 15px;
+	    			.text{
+	    				font-weight: 100;
+	    				color: #fff;
+	    				width: 15%;
+						text-align: center;
+						border-bottom: none;
+						.bold{
+							font-weight: bold;
+						}
+	    			}
+	    		}
+	    	}
+    	}
+    	.item-list-brands{
+    		.item-brands{
+    			min-width: 48%;
+			    text-align: center;
+			    margin-left: 15px;
+			    background: #fff;
+    			.image-logo{
+    				.image{
+    					img{
+    						margin: 0 auto;
+    					}
+    				}
+    			}
+    			.link-btn{
+    				background-color: #fff;
+    				margin: 20px 20px 45px 20px;
+					.btn-brown{
+						background-color: #a47f2d;
+						width: 200px;
+						border-radius: 15px;
+						font-size: 18px;
+						font-weight: 200;
+						a{
+							color: #fff;
+							text-decoration: none;
+						}
+	    			}
+	    		}
+    		}
+    	}
+		.slick-track{
+			.slide{
+				ul{
+					&.block-grid{
+						    padding: 0;
+						    text-align: center;
+						li{
+							&.grid{
+								display: block;
+								float: left;
+								margin-left: 30px;
+								.slide__media{
+									// text-align: center;
+								    background: #fff;
+								    padding: 25px;
+								    min-height: 350px;
+								    border: 1px solid #ccc;
+    					  			.btn-brown{
+									    background-color: #a47f2d;
+									    width: 200px;
+									    border-radius: 15px;
+									    font-size: 18px;
+									    font-weight: 200;
+									    a{
+									    	color: #fff;
+									    	text-decoration: none;
+									    }
+    					  			}
+								}
+							}
+							&.grid--0{
+								margin-left: 20px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.slick__arrow{
+			button{
+				&.slick-arrow{
+					border-radius: 0;
+					&.slick-prev{
+						height: 75px;
+    					width: 55px;
+						background: url(../images/slide/slick-prev.png) no-repeat;
+						&:before{
+							content: '';
+						}
+					}
+					&.slick-next{
+						height: 75px;
+    					width: 55px;
+						background: url(../images/slide/slick-next.png) no-repeat;
+						&:before{
+							content: '';
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/**
+ * Leader Content
+ */
+.leader-content{
+	background: url(../images/front/intro-bg-main.jpg) no-repeat top center;
+	min-height: 810px;
+	.text-main-content{
+		color: #fff;
+		padding: 60px 0 0 0;
+		.title{
+			font-size: 60px;
+			font-weight: 200;
+			.strong{
+				font-weight: bold;
+			}
+		}
+		.detail{
+			padding: 40px 0;
+			width: 45%;
+		    font-size: 20px;
+		    font-weight: 200;
+		}
+		.button{
+			.btn-learn-more{
+				color: #fff;
+			    border: 1px solid #fff;
+			    border-radius: 15px;
+			    min-width: 120px;
+			    font-size: 16px;
+			    font-weight: 200;
+			}
+		}
+	}
+}
+/**
+ * Services Content
+ */
+.services-content{
+	.services-item{
+		ul{
+			&.services-item-list{
+				padding: 0;
+				li{
+					display: inline-block;
+					text-align: center;
+					list-style: none;
+				}
+			}
+		}
+	}
+}
+/**
+ * Main Content
+ */
+.main-container{
+	padding-bottom: 20px;
+}
+/**
+ * Page Contact Us
+ */
+.page-layout-contact-us{
+	.slide-header{
+		background: url(../images/bg/bg-contact.jpg) no-repeat center top;
+	    background-size:  cover;
+		min-height: 795px;
+		position: relative;
+		.region-slide-header{
+			color: #fff;
+			position: absolute;
+			top: 35%;
+			transform: translateY(-35%);
+			width: 100%;
+			#block-blockmessagescontact{
+				h2.title{
+					font-size: 90px;
+				}
+				.body-messages{
+					width: 50%;
+				    margin: 0px auto;
+				    font-size: 20px;
+				    font-weight: lighter;
+				}
+
+			}
+		}
+		.before-title-content{
+			width: 100%;
+		    position: absolute;
+		    bottom: 0;
+		    .container{
+		    	height: 35px;
+    			background: #fff;
+		    }
+		}
+	}
+	.region-content{
+		h1.page-header{
+			color: #520975;
+			border-color: #a47f2d;
+		}
+		article{
+			padding-top: 30px;
+			h3.title-company{
+				margin-top:0;
+			}
+		}
+		.ul-contact{
+			padding: 0;
+			li{
+				list-style: none;
+			    padding-left: 40px;
+			    height: 40px;
+			    line-height: 40px;
+				&.li-t{
+					background: url(../images/contact/li-t.png) no-repeat center left;
+				}
+				&.li-f{
+					background: url(../images/contact/li-f.png) no-repeat center left;
+				}
+				&.li-e{
+					background: url(../images/contact/li-e.png) no-repeat center left;
+				}
+			}
+			
+		}
+	}
+}
+/**
+ * Page Content type Hotel
+ */
+.page-node-type-hotel{
+	.slide-header{
+		position: relative;
+		.before-title-content{
+			width: 100%;
+		    position: absolute;
+		    bottom: 0;
+		    .container{
+		    	height: 35px;
+    			background: #fff;
+		    }
+		}
+		#slick-3, #slick-views-slide-on-node-block-1-1{
+			.slick-dots{
+				position: absolute;
+			    bottom: 35px;
+			    left: 67%;
+			    transform: translateX(46%);
+			    width: 20%;
+			    text-align: right;
+                li{
+                	margin: 0;
+                	&.slick-active{
+                		button{
+                			&:before{
+                				opacity:1;
+                			}
+                		}
+                	}
+                	button{
+                		&:before{
+                			font-size: 14px;
+                			opacity:.5;
+							color: #fff;
+                		}
+                	}
+                }
+			}
+		}
+		#block-block-header-duchess-hotel,#block-block-header-zone-hotel{
+			position: absolute;
+		    top: 35%;
+		    transform: translateY(-35%);
+		    width: 100%;
+		    color: #fff;
+			h2.title{
+					font-size: 90px;
+				}
+			.body-messages{
+					width: 50%;
+				    margin: 0px auto;
+				    font-size: 20px;
+				    font-weight: lighter;
+				}
+		}
+	}
+	.main-container{
+		.region-content{
+			article{
+				&.hotel{
+					.content{
+						.field--name-body{
+							font-size: 22px;
+						}
+					}
+				}
+			}
+			h1{
+				color: #520975;
+				border:none;
+			}
+			.btn-brown{
+				background-color: #a47f2d;
+				width: 200px;
+				border-radius: 15px;
+				font-size: 18px;
+				font-weight: 200;
+				a{
+					color: #fff;
+					text-decoration: none;
+				}
+		    }
+		    ul.list-itmes{
+			    list-style: none;
+			    padding:0;
+			    margin:0;
+			    li{
+				    padding-left: 1.5em;
+				    text-indent: -.7em;
+				    &:before{
+					     content:"\002022";
+					    font-size: 20px;
+					    padding-right: 10px;
+					    color: #a47f2d;
+					}
+				}
+			}
+		}
+	}
+	.slide-footer{
+		.slick__arrow{
+			button{
+				&.slick-arrow{
+					border-radius: 0;
+					&.slick-prev{
+						height: 75px;
+    					width: 55px;
+						background: url(../images/slide/slick-prev.png) no-repeat;
+						&:before{
+							content: '';
+						}
+					}
+					&.slick-next{
+						height: 75px;
+    					width: 55px;
+						background: url(../images/slide/slick-next.png) no-repeat;
+						&:before{
+							content: '';
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/**
+ * Footer
+ */
+footer{
+	&.footer{
+		background-color: #a47f2d;
+		padding:  20px 0;
+		margin: 0;
+		border: none;
+		color: #fff;
+		a{
+			color: #fff;
+		}
+		#block-copyright{
+			float: left;
+			font-weight: 300;
+		}
+		#block-wrightmans-footer{
+			float: right;
+			ul{
+				&.menu{
+					li{
+						background: url(../images/menu/i-w.png) no-repeat center right;
+						float: left;
+						a{
+							padding: 0 15px;
+							font-weight: 300;
+							&:hover{
+								background: none;
+							}
+						}
+						&:last-child{
+							background: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/**
+ * Style For Mobile
+ */
+
+@media only screen and (max-width: 768px) {
+	/**
+	 * Header and nav.
+	 */
+	header{
+		&#navbar{
+			background-color: #fff;
+			border: none;
+			height: 90px;
+	        border-bottom: 1px solid #ccc;
+	        box-shadow: -1px 0 3px 1px rgba(0, 0, 0, 0.3333);
+		}
+		.navbar-header{
+			.navbar-toggle{
+				margin-top: 30px;
+			}
+			.logo{
+				padding-left: 15px;
+			}
+		}
+		.navbar-collapse{
+			background-color: #fff;
+			#block-wrightmans-main-menu{
+				padding-top: 20px;
+				ul{
+					&.menu{
+						text-transform: uppercase;
+						font-weight: bold;
+						li{
+							background: none;
+							text-align: center;
+							&:last-child{
+								background: none;
+							}
+							a{
+								color: #520974;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	/**
+ 	* Intro header
+ 	*/
+	.intro-header{
+		min-height: 355px;
+		.region-header{
+    		position: absolute;
+    		top: 30%;
+			transform: translateY(-30%);
+			width: 100%;
+		    #block-intromessage{
+		    	.title-message{
+		    		font-size: 35px;
+		    	}
+		    	.body-message{
+		    		width: 90%;
+				    margin: 0px auto;
+				    font-size: 12px;
+		    	}
+		    }
+		}
+	}
+
+	/**
+	 * Our Brands
+	 */
+	.our-brands{
+		background-color: #f1f1f1;
+		#block-views-block-slide-carousel-block-1{
+			position: relative;
+	    	bottom: 90px;
+	    	.view-header{
+	    		fieldset{
+		    		&.title-our-brands{
+		    			border-top: 1px solid #d2d2d2;
+		    			margin: 0 15px;
+		    			.text{
+		    				font-weight: 100;
+		    				color: #fff;
+		    				width: 50%;
+							text-align: center;
+							border-bottom: none;
+							.bold{
+								font-weight: bold;
+							}
+		    			}
+		    		}
+		    	}
+	    	}
+	    	.item-list-brands{
+	    		.item-brands{
+	    			    min-width: 100%;
+					    text-align: center;
+					    margin: 0 0 20px 0;
+					    background: #fff;
+	    			.image-logo{
+	    				.image{
+	    					img{
+	    						margin: 0 auto;
+	    					}
+	    				}
+	    			}
+	    			.link-btn{
+	    				background-color: #fff;
+	    				 margin: 20px;
+						.btn-brown{
+							background-color: #a47f2d;
+							width: 200px;
+							border-radius: 15px;
+							font-size: 18px;
+							font-weight: 200;
+							a{
+								color: #fff;
+								text-decoration: none;
+							}
+		    			}
+		    		}
+	    		}
+	    	}
+	    }
+	}
+
+	
+	/**
+ * Page Content type Hotel
+ */
+	.page-node-type-hotel{
+		.slide-header{
+			#slick-3-slider{
+				.slick-dots{
+				    left: 55%;
+				    transform: translateX(46%);
+				    width: 30%;
+				}
+			}
+			#block-block-header-duchess-hotel,#block-block-header-zone-hotel{
+				position: absolute;
+			    top: 35%;
+			    transform: translateY(-35%);
+			    width: 100%;
+			    color: #fff;
+				h2.title{
+						font-size: 35px;
+					}
+				.body-messages{
+						width: 90%;
+					    margin: 0px auto;
+					    font-size: 12px;
+					}
+			}
+		}
+		.main-container{
+			.region-content{
+				article{
+					&.hotel{
+						.content{
+							.field--name-body{
+								font-weight: 300;
+	    						font-size: 18px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+	/**
+ 	* Page Contact Us
+ 	*/
+	.page-layout-contact-us{
+		.slide-header{
+			min-height: 355px;
+			.region-slide-header{
+				#block-blockmessagescontact{
+					h2.title{
+						font-size: 35px;
+					}
+					.body-messages{
+						width: 90%;
+					    margin: 0px auto;
+					    font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+	/**
+ * Footer
+ */
+	footer{
+		&.footer{
+			#block-copyright{
+				float: none;
+				text-align: center;
+			}
+			#block-wrightmans-footer{
+				float: right;
+				ul{
+					&.menu{
+						li{
+							text-align: center;
+							a{
+								padding: 0 10px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

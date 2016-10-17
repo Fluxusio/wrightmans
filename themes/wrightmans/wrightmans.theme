@@ -1,0 +1,45 @@
+<?php
+/**
+ * @file
+ * Functions to support theming in the Bartik theme.
+ */
+
+use Drupal\Core\Template\Attribute;
+
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+/**
+ * Implements hook_preprocess_HOOK() for block templates.
+ */
+function wrightmans_preprocess_block(&$variables) {
+  switch ($variables['base_plugin_id']) {
+    case 'system_branding_block':
+      $variables['site_logo'] = '';
+      if ($variables['content']['site_logo']['#access'] && $variables['content']['site_logo']['#uri']) {
+        $variables['site_logo'] = str_replace('.svg', '.png', $variables['content']['site_logo']['#uri']);
+      }
+      break;
+
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ *
+ * Adds body classes if certain regions have content.
+ */
+function wrightmans_preprocess_html(&$variables) {
+  /* GetPath */
+  $current_path = \Drupal::service('path.current')->getPath();
+  $path_alias = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+
+  // Add information about the number of sidebars.
+  if (!empty($variables['page']['slide_header'])) {
+    $variables['attributes']['class'][] = 'page-layout-'. substr($path_alias,1);
+  }
+
+}
