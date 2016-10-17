@@ -1,0 +1,38 @@
+uuid: 723633bf-7bb9-45e7-9ed5-ac6854bca785
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.slide_on_node
+  module:
+    - node
+    - system
+    - views
+  theme:
+    - wrightmans
+id: views_block__slide_on_node_block_2
+theme: wrightmans
+region: slide_footer
+weight: -13
+provider: null
+plugin: 'views_block:slide_on_node-block_2'
+settings:
+  id: 'views_block:slide_on_node-block_2'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      hotel: hotel
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: /the-duchess-hotel
+    negate: false
+    context_mapping: {  }

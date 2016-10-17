@@ -1,0 +1,31 @@
+uuid: 4afa0822-cd3e-495c-b106-f29ae2d248d5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:8212e547-8f4c-4dfc-913c-60199e50db3f'
+  module:
+    - block_content
+    - system
+  theme:
+    - wrightmans
+id: block_header_zone_hotel
+theme: wrightmans
+region: slide_header
+weight: -7
+provider: null
+plugin: 'block_content:8212e547-8f4c-4dfc-913c-60199e50db3f'
+settings:
+  id: 'block_content:8212e547-8f4c-4dfc-913c-60199e50db3f'
+  label: 'Block Header Zone Hotel'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /the-zone-hotel
+    negate: false
+    context_mapping: {  }

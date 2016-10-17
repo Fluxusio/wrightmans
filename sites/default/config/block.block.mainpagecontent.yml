@@ -1,0 +1,20 @@
+uuid: 01024c92-142f-4aa3-af49-cf4d9d593e82
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - wrightmans
+id: mainpagecontent
+theme: wrightmans
+region: content
+weight: 2
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

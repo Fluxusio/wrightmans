@@ -1,0 +1,7 @@
+uuid: a15f5f9e-2f48-422f-a001-1afd46653189
+langcode: en
+status: true
+dependencies: {  }
+name: wrightman_corporation
+title: 'Wrightman Corporation'
+path: front

@@ -1,0 +1,25 @@
+uuid: 9f8e672c-ce1a-4975-8892-0aa876afa19b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:43009994-8366-4cdf-9c00-bae774e0ae15'
+  module:
+    - block_content
+  theme:
+    - wrightmans
+id: copyright
+theme: wrightmans
+region: footer
+weight: -7
+provider: null
+plugin: 'block_content:43009994-8366-4cdf-9c00-bae774e0ae15'
+settings:
+  id: 'block_content:43009994-8366-4cdf-9c00-bae774e0ae15'
+  label: Copyright
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

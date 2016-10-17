@@ -1,0 +1,31 @@
+uuid: a32e9b6d-3731-4393-af06-6c963bf619ae
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3a82d291-0ed4-470c-9802-2c1c2d381ba7'
+  module:
+    - block_content
+    - system
+  theme:
+    - wrightmans
+id: blockfrontmaincontent
+theme: wrightmans
+region: null
+weight: null
+provider: null
+plugin: 'block_content:3a82d291-0ed4-470c-9802-2c1c2d381ba7'
+settings:
+  id: 'block_content:3a82d291-0ed4-470c-9802-2c1c2d381ba7'
+  label: 'Block Front Main Content'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

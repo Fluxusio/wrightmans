@@ -1,0 +1,31 @@
+uuid: 5ddf468c-0720-4d8f-a123-0418020392e2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1ce50eab-6fde-4240-8a1a-266a704b4c1f'
+  module:
+    - block_content
+    - system
+  theme:
+    - wrightmans
+id: intromessage
+theme: wrightmans
+region: header
+weight: -11
+provider: null
+plugin: 'block_content:1ce50eab-6fde-4240-8a1a-266a704b4c1f'
+settings:
+  id: 'block_content:1ce50eab-6fde-4240-8a1a-266a704b4c1f'
+  label: 'Intro Message'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

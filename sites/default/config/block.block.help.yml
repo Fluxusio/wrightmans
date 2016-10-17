@@ -1,0 +1,20 @@
+uuid: b2737061-1de3-4ead-acc2-e3b8f40c3f00
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - wrightmans
+id: help
+theme: wrightmans
+region: help
+weight: -7
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

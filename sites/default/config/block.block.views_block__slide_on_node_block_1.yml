@@ -1,0 +1,32 @@
+uuid: f4f270e5-d69f-4ae4-9f5d-4ee2d2a2e176
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.slide_on_node
+  module:
+    - node
+    - views
+  theme:
+    - wrightmans
+id: views_block__slide_on_node_block_1
+theme: wrightmans
+region: slide_header
+weight: -8
+provider: null
+plugin: 'views_block:slide_on_node-block_1'
+settings:
+  id: 'views_block:slide_on_node-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      hotel: hotel
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

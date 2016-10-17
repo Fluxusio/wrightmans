@@ -1,0 +1,18 @@
+uuid: cbb59f92-a87a-47b7-bc6c-bde451a6a849
+langcode: en
+status: true
+dependencies:
+  theme:
+    - wrightmans
+id: primaryadminactions
+theme: wrightmans
+region: content
+weight: 0
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,31 @@
+uuid: 9675c869-2919-4d95-871c-f3f4992411cc
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c59ee35b-981e-43c8-960b-11f11d166c45'
+  module:
+    - block_content
+    - system
+  theme:
+    - wrightmans
+id: blockmessagescontact
+theme: wrightmans
+region: slide_header
+weight: -5
+provider: null
+plugin: 'block_content:c59ee35b-981e-43c8-960b-11f11d166c45'
+settings:
+  id: 'block_content:c59ee35b-981e-43c8-960b-11f11d166c45'
+  label: 'Block Messages Contact'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /contact-us
+    negate: false
+    context_mapping: {  }

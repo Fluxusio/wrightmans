@@ -1,0 +1,24 @@
+uuid: cd0b0180-88fd-4534-a0ce-32d2c13917b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - wrightmans
+id: wrightmans_main_menu
+theme: wrightmans
+region: navigation_collapsible
+weight: -8
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

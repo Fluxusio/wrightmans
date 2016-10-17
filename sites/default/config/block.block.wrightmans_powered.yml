@@ -1,0 +1,22 @@
+uuid: 039da6bc-2f71-4b12-8b08-8a8b69068dd5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - wrightmans
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: wrightmans_powered
+theme: wrightmans
+region: null
+weight: null
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

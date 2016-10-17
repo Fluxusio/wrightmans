@@ -1,0 +1,29 @@
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: 'http://wrightman.dev/themes/wrightmans/favicon.ico'
+  use_default: 1
+schema: '8000'
+features:
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+  node_user_picture: 1
+logo:
+  path: ''
+  url: ''
+  use_default: 1
+cdn_jsdelivr_version: 3.3.6
+cdn_provider: ''
+navbar_position: fixed-top
+breadcrumb_title: 0
+region_wells:
+  slide_header: ''
+  our_brands: ''
+  services: ''
+  sidebar_second: ''
+  slide_footer: ''
+breadcrumb: '0'
+schemas:
+  bootstrap: 8000
+  wrightmans: 8000

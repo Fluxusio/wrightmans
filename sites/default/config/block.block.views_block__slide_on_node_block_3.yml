@@ -1,0 +1,38 @@
+uuid: f2dbf959-9309-46f7-8ba6-3e9a6a2b11b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.slide_on_node
+  module:
+    - node
+    - system
+    - views
+  theme:
+    - wrightmans
+id: views_block__slide_on_node_block_3
+theme: wrightmans
+region: slide_footer
+weight: -13
+provider: null
+plugin: 'views_block:slide_on_node-block_3'
+settings:
+  id: 'views_block:slide_on_node-block_3'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      hotel: hotel
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: /the-zone-hotel
+    negate: false
+    context_mapping: {  }

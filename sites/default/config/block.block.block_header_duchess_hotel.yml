@@ -1,0 +1,31 @@
+uuid: 8741c729-d9da-47d2-870a-49b41924ea30
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:14d4a195-53fd-435d-b731-4904686a7cdb'
+  module:
+    - block_content
+    - system
+  theme:
+    - wrightmans
+id: block_header_duchess_hotel
+theme: wrightmans
+region: slide_header
+weight: -6
+provider: null
+plugin: 'block_content:14d4a195-53fd-435d-b731-4904686a7cdb'
+settings:
+  id: 'block_content:14d4a195-53fd-435d-b731-4904686a7cdb'
+  label: 'Block Header Duchess Hotel'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /the-duchess-hotel
+    negate: false
+    context_mapping: {  }
