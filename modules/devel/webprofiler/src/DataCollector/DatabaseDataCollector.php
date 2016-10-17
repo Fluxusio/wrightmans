@@ -41,6 +41,7 @@ class DatabaseDataCollector extends DataCollector implements DrupalDataCollector
    * {@inheritdoc}
    */
   public function collect(Request $request, Response $response, \Exception $exception = NULL) {
+<<<<<<< HEAD
     $connections = [];
     foreach (Database::getAllConnectionInfo() as $key => $info) {
       $database = Database::getConnection('default', $key);
@@ -79,6 +80,32 @@ class DatabaseDataCollector extends DataCollector implements DrupalDataCollector
     }
 
     $this->data['queries'] = $data;
+=======
+    $queries = $this->database->getLogger()->get('webprofiler');
+
+    foreach ($queries as &$query) {
+      // Remove caller args.
+      unset($query['caller']['args']);
+
+      // Remove query args element if empty.
+      if(empty($query['args'])) {
+        unset($query['args']);
+      }
+
+      // Save time in milliseconds.
+      $query['time'] = $query['time'] * 1000;
+    }
+
+    $querySort = $this->configFactory->get('webprofiler.config')->get('query_sort');
+    if('duration' === $querySort) {
+      usort($queries, [
+        "Drupal\\webprofiler\\DataCollector\\DatabaseDataCollector",
+        "orderQueryByTime",
+      ]);
+    }
+
+    $this->data['queries'] = $queries;
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 
     $options = $this->database->getConnectionOptions();
 

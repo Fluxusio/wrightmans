@@ -14,8 +14,11 @@ use Drupal\Core\Annotation\Translation;
 /**
  * The "jsdelivr" CDN provider plugin.
  *
+<<<<<<< HEAD
  * @ingroup plugins_provider
  *
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  * @BootstrapProvider(
  *   id = "jsdelivr",
  *   label = @Translation("jsDelivr"),
@@ -108,7 +111,11 @@ class JsDelivr extends ProviderBase {
     ]);
 
     // Expected library names from jsDelivr API v1. Must use "twitter-bootstrap"
+<<<<<<< HEAD
     // instead of "bootstrap" (which is just a directory alias).
+=======
+    // instead of "bootstrap" (which is just a folder alias).
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
     // @see https://www.drupal.org/node/2504343
     // @see https://github.com/jsdelivr/api/issues/94
     $bootstrap = 'twitter-bootstrap';

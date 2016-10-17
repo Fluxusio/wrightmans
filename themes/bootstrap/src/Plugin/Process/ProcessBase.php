@@ -12,8 +12,11 @@ use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Base process class used to process elements.
+<<<<<<< HEAD
  *
  * @ingroup plugins_process
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  */
 class ProcessBase extends PluginBase implements ProcessInterface {
 

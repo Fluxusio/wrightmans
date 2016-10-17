@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
 /**
  * @file
@@ -9,6 +10,9 @@ use Drupal\Core\Menu\MenuTreeParameters;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Url;
 
+=======
+use Drupal\Core\Menu\MenuTreeParameters;
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 /**
  *  Implements hook_toolbar_alter().
  */
@@ -16,6 +20,7 @@ function admin_toolbar_toolbar_alter(&$items) {
   $items['administration']['tray']['toolbar_administration']['#pre_render'] = array('admin_toolbar_prerender_toolbar_administration_tray');
   $items['administration']['#attached']['library'][] = 'admin_toolbar/toolbar.tree';
 }
+<<<<<<< HEAD
 
 /**
  *  Implements hook_help().
@@ -33,6 +38,8 @@ function admin_toolbar_help($route_name, RouteMatchInterface $route_match) {
   }
 }
 
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 /**
  * Renders the toolbar's administration tray.
  * This is a clone of core's toolbar_prerender_toolbar_administration_tray()
@@ -45,7 +52,11 @@ function admin_toolbar_help($route_name, RouteMatchInterface $route_match) {
  *
  * @see toolbar_prerender_toolbar_administration_tray()
  */
+<<<<<<< HEAD
 function admin_toolbar_prerender_toolbar_administration_tray(array $element) {
+=======
+function admin_toolbar_prerender_toolbar_administration_tray(array $element) { 
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
   $menu_tree = \Drupal::service('toolbar.menu_tree');
   $parameters = new MenuTreeParameters();
   $parameters->setRoot('system.admin')->excludeRoot()->setMaxDepth(4)->onlyEnabledLinks();
@@ -76,7 +87,22 @@ function toolbar_tools_menu_navigation_links(array $tree) {
     if ($element->subtree) {
       toolbar_tools_menu_navigation_links($element->subtree);
     }
+<<<<<<< HEAD
     $link = $element->link;
+=======
+
+    // Make sure we have a path specific ID in place, so we can attach icons
+    // and behaviors to the menu links.
+    $link = $element->link;
+    $url = $link->getUrlObject();
+    if (!$url->isRouted()) {
+      // This is an unusual case, so just get a distinct, safe string.
+      $id = substr(Crypt::hashBase64($url->getUri()), 0, 16);
+    }
+    else {
+      $id = str_replace(array('.', '<', '>'), array('-', '', ''), $url->getRouteName());
+    }
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 
     // Get the non-localized title to make the icon class.
     $definition = $link->getPluginDefinition();
@@ -86,4 +112,8 @@ function toolbar_tools_menu_navigation_links(array $tree) {
     $element->options['attributes']['title'] = $link->getDescription();
   }
   return $tree;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966

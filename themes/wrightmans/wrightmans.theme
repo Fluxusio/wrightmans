@@ -1,6 +1,7 @@
 <?php
 /**
  * @file
+<<<<<<< HEAD
  * Functions to support theming in the Bartik theme.
  */
 
@@ -8,10 +9,13 @@ use Drupal\Core\Template\Attribute;
 
 /**
  * @file
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  * Bootstrap sub-theme.
  *
  * Place your custom PHP code in this file.
  */
+<<<<<<< HEAD
 /**
  * Implements hook_preprocess_HOOK() for block templates.
  */
@@ -43,3 +47,5 @@ function wrightmans_preprocess_html(&$variables) {
   }
 
 }
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966

@@ -2,6 +2,7 @@
  * @file
  * Extends methods from core/misc/tabledrag.js.
  */
+<<<<<<< HEAD
 (function ($) {
 
   // Save the original prototype.
@@ -424,6 +425,27 @@
       }
     });
   };
+=======
+
+(function ($) {
+
+  $.extend(Drupal.theme, /** @lends Drupal.theme */{
+
+    /**
+     * @return {string}
+     */
+    tableDragChangedMarker: function () {
+      return '<span class="tabledrag-changed glyphicon glyphicon-warning-sign text-warning"></span>';
+    },
+
+    /**
+     * @return {string}
+     */
+    tableDragChangedWarning: function () {
+      return '<div class="tabledrag-changed-warning alert alert-warning messages warning">' + Drupal.theme('tableDragChangedMarker') + ' ' + Drupal.t('You have unsaved changes.') + '</div>';
+    }
+  });
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 
   /**
    * Add an asterisk or other marker to the changed row.
@@ -437,6 +459,7 @@
     }
   };
 
+<<<<<<< HEAD
   $.extend(Drupal.theme, /** @lends Drupal.theme */{
 
     /**
@@ -454,4 +477,6 @@
     }
   });
 
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 })(jQuery);

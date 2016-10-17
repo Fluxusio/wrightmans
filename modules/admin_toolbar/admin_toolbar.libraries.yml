@@ -2,4 +2,8 @@ toolbar.tree:
   version: VERSION
   css:
     theme:
+<<<<<<< HEAD
       css/admin.toolbar.css: {}
+=======
+      css/admin.toolbar.css: {}
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966

@@ -13,7 +13,11 @@ use Drupal\Core\Plugin\DefaultPluginManager;
 /**
  * Base class for Bootstrap plugin managers.
  *
+<<<<<<< HEAD
  * @ingroup utility
+=======
+ * @ingroup plugin_api
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  */
 class PluginManager extends DefaultPluginManager {
 

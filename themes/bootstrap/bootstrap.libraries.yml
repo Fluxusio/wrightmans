@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 attributes:
   js:
     js/attributes.js: {}
@@ -9,10 +10,21 @@ drupal.bootstrap:
   js:
     js/drupal.bootstrap.js: {}
   dependencies:
+=======
+# Placeholder for the "base-theme" library.
+# @see \Drupal\bootstrap\Plugin\Alter\LibraryInfo
+base-theme:
+  css: {}
+  js:
+    js/drupal.bootstrap.js: {}
+  dependencies:
+    - core/underscore
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
     - core/jquery
     - core/drupal
     - core/drupalSettings
 
+<<<<<<< HEAD
 theme:
   js:
     js/theme.js: {}
@@ -20,6 +32,8 @@ theme:
     - bootstrap/drupal.bootstrap
     - bootstrap/attributes
 
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 theme-settings:
   js:
     js/theme-settings.js: {}
@@ -33,40 +47,63 @@ dropdown:
   js:
     js/dropdown.js: {}
   dependencies:
+<<<<<<< HEAD
     - bootstrap/theme
+=======
+    - bootstrap/base-theme
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 
 modal:
   js:
     js/modal.js: {}
   dependencies:
+<<<<<<< HEAD
     - bootstrap/theme
+=======
+    - bootstrap/base-theme
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 
 popover:
   js:
     js/popover.js: {}
   dependencies:
+<<<<<<< HEAD
     - bootstrap/theme
+=======
+    - bootstrap/base-theme
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 
 tooltip:
   js:
     js/tooltip.js: {}
   dependencies:
+<<<<<<< HEAD
     - bootstrap/theme
+=======
+    - bootstrap/base-theme
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 
 # libraries-extend
 drupal.ajax:
   js:
     js/misc/ajax.js: {}
 
+<<<<<<< HEAD
 drupal.autocomplete:
   js:
     js/misc/autocomplete.js: {}
 
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 drupal.form:
   js:
     js/misc/form.js: {}
   dependencies:
+<<<<<<< HEAD
     - bootstrap/theme
+=======
+    - bootstrap/base-theme
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 
 drupal.progress:
   js:
@@ -80,6 +117,7 @@ drupal.tabledrag:
   js:
     js/misc/tabledrag.js: {}
 
+<<<<<<< HEAD
 views.ajax:
   js:
     js/modules/views/ajax_view.js: {}
@@ -94,6 +132,9 @@ drupal.batch:
     - core/drupal.progress
     - core/jquery.once
 
+=======
+# libraries-override
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 drupal.dialog:
   js:
     js/misc/dialog.js: {}
@@ -107,6 +148,7 @@ drupal.dialog.ajax:
     - core/drupal.ajax
     - bootstrap/drupal.dialog
 
+<<<<<<< HEAD
 drupal.filter:
   version: VERSION
   js:
@@ -116,6 +158,8 @@ drupal.filter:
     - core/drupal
     - core/jquery.once
 
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 drupal.text:
   js:
     js/text/text.js: {}
@@ -128,7 +172,11 @@ drupal.vertical-tabs:
   js:
     js/misc/vertical-tabs.js: {}
   dependencies:
+<<<<<<< HEAD
     - bootstrap/theme
+=======
+    - bootstrap/base-theme
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
     - core/jquery.once
     - core/drupal.form
     - core/matchmedia

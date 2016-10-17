@@ -18,7 +18,11 @@ var Drupal = Drupal || {};
         html: !!settings.popover_html,
         placement: settings.popover_placement,
         selector: settings.popover_selector,
+<<<<<<< HEAD
         trigger: settings.popover_trigger,
+=======
+        trigger: _.filter(_.values(settings.popover_trigger)).join(' '),
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
         triggerAutoclose: !!settings.popover_trigger_autoclose,
         title: settings.popover_title,
         content: settings.popover_content,
@@ -35,6 +39,7 @@ var Drupal = Drupal || {};
    */
   Drupal.behaviors.bootstrapPopovers = {
     attach: function (context) {
+<<<<<<< HEAD
 
       // Popover autoclose.
       if ($.fn.popover.Constructor.DEFAULTS.triggerAutoclose) {
@@ -63,10 +68,23 @@ var Drupal = Drupal || {};
         ;
       }
 
+=======
+      var $currentPopover = $();
+
+      if ($.fn.popover.Constructor.DEFAULTS.triggerAutoclose) {
+        $(document).on('click', function (e) {
+          if ($currentPopover.length && !$(e.target).is('[data-toggle=popover]') && $(e.target).parents('.popover.in').length === 0) {
+            $currentPopover.popover('hide');
+            $currentPopover = $();
+          }
+        });
+      }
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
       var elements = $(context).find('[data-toggle=popover]').toArray();
       for (var i = 0; i < elements.length; i++) {
         var $element = $(elements[i]);
         var options = $.extend({}, $.fn.popover.Constructor.DEFAULTS, $element.data());
+<<<<<<< HEAD
 
         // Store the original trigger.
         options.originalTrigger = options.trigger;
@@ -111,3 +129,27 @@ var Drupal = Drupal || {};
   };
 
 })(window.jQuery, window.Drupal, window.Drupal.bootstrap);
+=======
+        if (!options.content) {
+          options.content = function () {
+            var target = $(this).data('target');
+            return target && $(target) && $(target).length && $(target).clone().removeClass('visually-hidden').wrap('<div/>').parent()[$(this).data('bs.popover').options.html ? 'html' : 'text']() || '';
+          }
+        }
+        $element.popover(options).on('click', function (e) {
+          e.preventDefault();
+        });
+        if (options.triggerAutoclose) {
+          $element.on('show.bs.popover', function () {
+            if ($currentPopover.length) {
+              $currentPopover.popover('hide');
+            }
+            $currentPopover = $(this);
+          });
+        }
+      }
+    }
+  };
+
+})(jQuery, Drupal, Drupal.Bootstrap);
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966

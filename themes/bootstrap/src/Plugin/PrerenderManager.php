@@ -11,8 +11,11 @@ use Drupal\bootstrap\Utility\Element;
 
 /**
  * Manages discovery and instantiation of Bootstrap pre-render callbacks.
+<<<<<<< HEAD
  *
  * @ingroup plugins_prerender
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  */
 class PrerenderManager extends PluginManager {
 

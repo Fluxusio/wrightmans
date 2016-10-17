@@ -5,7 +5,10 @@ ide_link: "txmt://open?url=file://@file&line=@line"
 ide_link_remote: ""
 ide_link_local: ""
 active_toolbar_items:
+<<<<<<< HEAD
   devel: devel
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
   assets: assets
   blocks: blocks
   cache: cache

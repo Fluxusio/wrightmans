@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Dumpers
  */
@@ -7,6 +8,17 @@
   overflow: auto;
 }
 
+=======
+.devel-obj-output .field {
+  color: red;
+}
+
+.devel-obj-output dd {
+  display: block;
+}
+
+
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 /**
  * Switch User block
  */

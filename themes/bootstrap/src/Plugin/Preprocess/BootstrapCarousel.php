@@ -18,7 +18,11 @@ use Drupal\Core\Url;
 /**
  * Pre-processes variables for the "bootstrap_carousel" theme hook.
  *
+<<<<<<< HEAD
  * @ingroup plugins_preprocess
+=======
+ * @ingroup theme_preprocess
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  *
  * @BootstrapPreprocess("bootstrap_carousel")
  */
@@ -27,7 +31,11 @@ class BootstrapCarousel extends PreprocessBase implements PreprocessInterface {
   /**
    * {@inheritdoc}
    */
+<<<<<<< HEAD
   protected function preprocessVariables(Variables $variables) {
+=======
+  protected function preprocessVariables(Variables $variables, $hook, array $info) {
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
     // Retrieve the ID, generating one if needed.
     $id = $variables->getAttribute('id', Html::getUniqueId($variables->offsetGet('id', 'bootstrap-carousel')));
     unset($variables['id']);
@@ -81,7 +89,11 @@ class BootstrapCarousel extends PreprocessBase implements PreprocessInterface {
     }
 
     // Ensure all attributes are proper objects.
+<<<<<<< HEAD
     $this->preprocessAttributes();
+=======
+    $this->preprocessAttributes($variables, $hook, $info);
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
   }
 
 }

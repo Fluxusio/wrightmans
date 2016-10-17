@@ -13,13 +13,20 @@ use Drupal\Core\Annotation\Translation;
 /**
  * The "modal_backdrop" theme setting.
  *
+<<<<<<< HEAD
  * @ingroup plugins_setting
  *
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  * @BootstrapSetting(
  *   id = "modal_backdrop",
  *   type = "select",
  *   title = @Translation("backdrop"),
+<<<<<<< HEAD
  *   description = @Translation("Includes a modal-backdrop element. Alternatively, specify <code>static</code> for a backdrop which doesn't close the modal on click."),
+=======
+ *   description = @Translation("Includes a modal-backdrop element. Alternatively, specify <kbd>static</kbd> for a backdrop which doesn't close the modal on click."),
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  *   defaultValue = "true",
  *   groups = {
  *     "javascript" = @Translation("JavaScript"),

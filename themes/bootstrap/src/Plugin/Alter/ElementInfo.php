@@ -15,8 +15,11 @@ use Drupal\bootstrap\Plugin\ProcessManager;
 /**
  * Implements hook_element_info_alter().
  *
+<<<<<<< HEAD
  * @ingroup plugins_alter
  *
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  * @BootstrapAlter("element_info")
  */
 class ElementInfo extends PluginBase implements AlterInterface {
@@ -34,6 +37,14 @@ class ElementInfo extends PluginBase implements AlterInterface {
     foreach (array_keys($types) as $type) {
       $element = &$types[$type];
 
+<<<<<<< HEAD
+=======
+      // Ensure elements that have a base type with the #input set match.
+      if (isset($element['#base_type']) && isset($types[$element['#base_type']]) && isset($types[$element['#base_type']]['#input'])) {
+        $element['#input'] = $types[$element['#base_type']]['#input'];
+      }
+
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
       // Core does not actually use the "description_display" property on the
       // "details" or "fieldset" element types because the positioning of the
       // description is never used in core templates. However, the form builder

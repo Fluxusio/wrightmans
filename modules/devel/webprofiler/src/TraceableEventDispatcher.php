@@ -52,6 +52,7 @@ class TraceableEventDispatcher extends BaseTraceableEventDispatcher {
         break;
     }
   }
+<<<<<<< HEAD
 
   /**
    * {@inheritdoc}
@@ -67,4 +68,6 @@ class TraceableEventDispatcher extends BaseTraceableEventDispatcher {
     }
   }
 
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 }

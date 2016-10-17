@@ -8,8 +8,11 @@
 namespace Drupal\devel\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
+<<<<<<< HEAD
 use Drupal\devel\DevelDumperPluginManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 use Symfony\Component\HttpFoundation\Request;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
@@ -20,6 +23,7 @@ use Drupal\Core\Url;
 class SettingsForm extends ConfigFormBase {
 
   /**
+<<<<<<< HEAD
    * Devel Dumper Plugin Manager.
    *
    * @var \Drupal\devel\DevelDumperPluginManager
@@ -46,6 +50,8 @@ class SettingsForm extends ConfigFormBase {
   }
 
   /**
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
    * {@inheritdoc}
    */
   public function getFormId() {
@@ -132,6 +138,7 @@ class SettingsForm extends ConfigFormBase {
      '#default_value' => $devel_config->get('rebuild_theme'),
     );
 
+<<<<<<< HEAD
     $dumper = $devel_config->get('devel_dumper');
     $default = $this->dumperManager->isPluginSupported($dumper) ? $dumper : $this->dumperManager->getFallbackPluginId(NULL);
 
@@ -159,6 +166,8 @@ class SettingsForm extends ConfigFormBase {
       ];
     }
 
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
     return parent::buildForm($form, $form_state);
   }
 
@@ -173,10 +182,14 @@ class SettingsForm extends ConfigFormBase {
       ->set('raw_names', $values['raw_names'])
       ->set('error_handlers', $values['error_handlers'])
       ->set('rebuild_theme', $values['rebuild_theme'])
+<<<<<<< HEAD
       ->set('devel_dumper', $values['dumper'])
       ->save();
 
     parent::submitForm($form, $form_state);
+=======
+      ->save();
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
   }
 
   /**

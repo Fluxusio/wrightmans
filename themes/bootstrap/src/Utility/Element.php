@@ -15,8 +15,11 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Provides helper methods for Drupal render elements.
  *
+<<<<<<< HEAD
  * @ingroup utility
  *
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  * @see \Drupal\Core\Render\Element
  */
 class Element extends DrupalAttributes {
@@ -138,6 +141,7 @@ class Element extends DrupalAttributes {
   }
 
   /**
+<<<<<<< HEAD
    * Appends a property with a value.
    *
    * @param string $name
@@ -168,6 +172,8 @@ class Element extends DrupalAttributes {
   }
 
   /**
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
    * Identifies the children of an element array, optionally sorted by weight.
    *
    * The children of a element array are those key/value pairs whose key does
@@ -424,6 +430,7 @@ class Element extends DrupalAttributes {
   }
 
   /**
+<<<<<<< HEAD
    * Prepends a property with a value.
    *
    * @param string $name
@@ -454,6 +461,8 @@ class Element extends DrupalAttributes {
   }
 
   /**
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
    * Gets properties of a structured array element (keys beginning with '#').
    *
    * @return array
@@ -614,12 +623,15 @@ class Element extends DrupalAttributes {
       $target = $this;
     }
 
+<<<<<<< HEAD
     // For "password_confirm" element types, move the target to the first
     // textfield.
     if ($target->isType('password_confirm')) {
       $target = $target->pass1;
     }
 
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
     // Retrieve the length limit for smart descriptions.
     if (!isset($length)) {
       // Disable length checking by setting it to FALSE if empty.
@@ -638,6 +650,7 @@ class Element extends DrupalAttributes {
     // Return if element or target shouldn't have "simple" tooltip descriptions.
     $html = FALSE;
     if (($input_only && !$target->hasProperty('input'))
+<<<<<<< HEAD
       // Ignore if the actual element has no #description set.
       || !$this->hasProperty('description')
 
@@ -659,6 +672,14 @@ class Element extends DrupalAttributes {
       // #smart_description property to FALSE.
       $this->setProperty('smart_description', FALSE);
       $target->setProperty('smart_description', FALSE);
+=======
+      || !$this->getProperty('smart_description', TRUE)
+      || !$target->getProperty('smart_description', TRUE)
+      || !$this->hasProperty('description')
+      || $target->hasAttribute('data-toggle')
+      || !Unicode::isSimple($this->getProperty('description'), $length, $allowed_tags, $html)
+    ) {
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
       return $this;
     }
 

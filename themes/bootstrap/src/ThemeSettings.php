@@ -16,8 +16,11 @@ use Drupal\Core\Config\StorageException;
  *
  * This is a wrapper around theme_get_setting() since it does not inherit
  * base theme config nor handle default/overridden values very well.
+<<<<<<< HEAD
  *
  * @ingroup utility
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  */
 class ThemeSettings extends Config {
 
@@ -149,9 +152,15 @@ class ThemeSettings extends Config {
     // Retrieve configured theme-specific settings, if any.
     try {
       if ($theme_settings = \Drupal::config($theme->getName() . '.settings')->get()) {
+<<<<<<< HEAD
         // Remove schemas if not the active theme.
         if (!$active_theme) {
           unset($theme_settings['schemas']);
+=======
+        // Remove the schema version if not the active theme.
+        if (!$active_theme) {
+          unset($theme_settings['schema']);
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
         }
         $config->merge($theme_settings);
       }
@@ -229,6 +238,7 @@ class ThemeSettings extends Config {
    *   TRUE or FALSE
    */
   public function overridesValue($name, $value) {
+<<<<<<< HEAD
     // Retrieve the currently stored value for comparison purposes.
     $current_value = $this->get($name);
 
@@ -242,6 +252,9 @@ class ThemeSettings extends Config {
 
     // Otherwise, determine if value is overridden by any array differences.
     return !!DiffArray::diffAssocRecursive([$name => $value], [$name => $current_value]);
+=======
+    return !!DiffArray::diffAssocRecursive([$name => $value], [$name => $this->get($name)]);
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
   }
 
   /**

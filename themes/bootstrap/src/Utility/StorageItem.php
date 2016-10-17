@@ -17,8 +17,11 @@ use Drupal\Core\KeyValueStore\MemoryStorage;
  *
  * This storage object can be used in `foreach` loops.
  *
+<<<<<<< HEAD
  * @ingroup utility
  *
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  * @see \Drupal\bootstrap\Utility\Storage
  */
 class StorageItem extends MemoryStorage implements \Iterator {

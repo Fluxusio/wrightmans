@@ -9,8 +9,11 @@ namespace Drupal\bootstrap\Utility;
 /**
  * Class for managing multiple types of attributes commonly found in Drupal.
  *
+<<<<<<< HEAD
  * @ingroup utility
  *
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  * @see \Drupal\bootstrap\Utility\Attributes
  * @see \Drupal\bootstrap\Utility\Element
  * @see \Drupal\bootstrap\Utility\Variables

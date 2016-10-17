@@ -35,8 +35,13 @@
                         if (filter[key].length > 0 && filter[key] != ' ') {
                             select = filter[key].split(' ').filter(Boolean);
                             for (sel in select) {
+<<<<<<< HEAD
                                 selector.push('[data-wp-' + key + ' *= ' + select[sel].toLowerCase() + ']');
                                 unselected.push('[data-wp-' + key + ']:not([data-wp-' + key + ' *= ' + select[sel].toLowerCase() + '])');
+=======
+                                selector.push('[data-wp-' + key + ' *= ' + select[sel] + ']');
+                                unselected.push('[data-wp-' + key + ']:not([data-wp-' + key + ' *= ' + select[sel] + '])');
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
                             }
                         }
                         else {

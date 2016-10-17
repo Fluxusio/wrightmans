@@ -14,8 +14,11 @@ use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Manages discovery and instantiation of Bootstrap form process callbacks.
+<<<<<<< HEAD
  *
  * @ingroup plugins_process
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  */
 class ProcessManager extends PluginManager {
 
@@ -57,16 +60,23 @@ class ProcessManager extends PluginManager {
 
     $e = Element::create($element, $form_state);
 
+<<<<<<< HEAD
     // Process AJAX.
     if (($e->getProperty('ajax') && !$e->isButton()) || $e->getProperty('autocomplete_route_name')) {
       static::processAjax($e, $form_state, $complete_form);
     }
 
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
     // Add "form-inline" class.
     if ($e->hasClass('container-inline')) {
       $e->replaceClass('container-inline', 'form-inline');
     }
+<<<<<<< HEAD
     if ($e->isType(['color', 'date', 'number', 'range', 'tel', 'weight'])) {
+=======
+    if ($e->isType(['color', 'date', 'number', 'password', 'password_confirm', 'range', 'tel', 'weight'])) {
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
       $e->addClass('form-inline', 'wrapper_attributes');
     }
 
@@ -77,6 +87,7 @@ class ProcessManager extends PluginManager {
       $e->setProperty('has_error', TRUE);
     }
 
+<<<<<<< HEAD
     // Process input groups.
     if ($e->getProperty('input') && ($e->getProperty('input_group') || $e->getProperty('input_group_button'))) {
       static::processInputGroups($e, $form_state, $complete_form);
@@ -123,6 +134,13 @@ class ProcessManager extends PluginManager {
     if ($element->getProperty('input_group_button')) {
       // Obtain the parent array to limit search.
       $array_parents = $element->getProperty('array_parents', []);
+=======
+    // Automatically inject the nearest button found after this element if
+    // #input_group_button exists.
+    if ($e->getProperty('input_group_button')) {
+      // Obtain the parent array to limit search.
+      $array_parents = $e->getProperty('array_parents', []);
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 
       // Remove the current element from the array.
       array_pop($array_parents);
@@ -132,11 +150,16 @@ class ProcessManager extends PluginManager {
 
       // Find the closest button.
       if ($button = self::findButton($parent)) {
+<<<<<<< HEAD
         $element->appendProperty('field_suffix', $button->setIcon());
+=======
+        $e->setProperty('field_suffix', $button->setIcon()->getArray());
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
         $button->setProperty('access', FALSE);
       }
     }
 
+<<<<<<< HEAD
     $input_group_attributes = ['class' => ['input-group-' . ($element->getProperty('input_group_button') ? 'btn' : 'addon')]];
     if ($prefix = $element->getProperty('field_prefix')) {
       $element->setProperty('field_prefix', [
@@ -156,6 +179,9 @@ class ProcessManager extends PluginManager {
         '#weight' => 1,
       ]);
     }
+=======
+    return $element;
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
   }
 
   /**

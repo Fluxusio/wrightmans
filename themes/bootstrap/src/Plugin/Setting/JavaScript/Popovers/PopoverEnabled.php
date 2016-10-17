@@ -14,8 +14,11 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * The "popover_enabled" theme setting.
  *
+<<<<<<< HEAD
  * @ingroup plugins_setting
  *
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  * @BootstrapSetting(
  *   id = "popover_enabled",
  *   type = "checkbox",
@@ -41,6 +44,7 @@ class PopoverEnabled extends SettingBase {
     $group->setProperty('description', t('Add small overlays of content, like those on the iPad, to any element for housing secondary information.'));
   }
 
+<<<<<<< HEAD
   /**
    * {@inheritdoc}
    */
@@ -48,4 +52,6 @@ class PopoverEnabled extends SettingBase {
     return !!$this->theme->getSetting('popover_enabled');
   }
 
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
 }

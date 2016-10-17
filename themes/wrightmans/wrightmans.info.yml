@@ -9,6 +9,7 @@ package: 'Bootstrap'
 regions:
   navigation: 'Navigation'
   navigation_collapsible: 'Navigation (Collapsible)'
+<<<<<<< HEAD
   slide_header: 'Slide Header'
   header: 'Top Bar'
   our_brands: 'Our Brands(Front Page)'
@@ -19,6 +20,14 @@ regions:
   sidebar_first: 'Primary'
   sidebar_second: 'Secondary'
   slide_footer: 'Slide Footer'
+=======
+  header: 'Top Bar'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
   footer: 'Footer'
   page_top: 'Page top'
   page_bottom: 'Page bottom'

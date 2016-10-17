@@ -17,6 +17,7 @@ function devel_uninstall() {
   }
 }
 
+<<<<<<< HEAD
 /**
  * Set the default devel dumper plugin.
  */
@@ -30,3 +31,5 @@ function devel_update_8001() {
     ->set('devel_dumper', $default_dumper)
     ->save(TRUE);
 }
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966

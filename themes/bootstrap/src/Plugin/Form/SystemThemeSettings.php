@@ -14,9 +14,12 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Implements hook_form_system_theme_settings_alter().
  *
+<<<<<<< HEAD
  * @ingroup plugins_form
  * @ingroup plugins_setting
  *
+=======
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
  * @BootstrapForm("system_theme_settings")
  */
 class SystemThemeSettings extends FormBase implements FormInterface {
@@ -136,8 +139,12 @@ class SystemThemeSettings extends FormBase implements FormInterface {
       $value = $form_state->getValue($name);
 
       // Determine if the setting has a new value that overrides the original.
+<<<<<<< HEAD
       // Ignore the schemas "setting" because it's handled by UpdateManager.
       if ($name !== 'schemas' && $settings->overridesValue($name, $value)) {
+=======
+      if ($settings->overridesValue($name, $value)) {
+>>>>>>> 638d6a829b84c64ae8d5580f52627532f1948966
         // Set the new value.
         $settings->set($name, $value);
 
